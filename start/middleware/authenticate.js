@@ -1,6 +1,6 @@
 const passport = require('passport')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
-const { googleClientID, googleClietnSecret } = require('../../config/config')
+const { googleClientID, googleClietnSecret, baseURL } = require('../../config/config')
 
 const User = require('../../models/User')
 
@@ -17,7 +17,7 @@ passport.use(
     {
       clientID: googleClientID,
       clientSecret: googleClietnSecret,
-      callbackURL: `/auth/google/callback`
+      callbackURL: `${baseURL}/auth/google/callback`
     },
     async (accessToken, refreshToken, profile, done) => {
       try {

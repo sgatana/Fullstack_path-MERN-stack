@@ -7,5 +7,6 @@ module.exports = {
   sessionKey: process.env.SESSSION_KEY,
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
-  port: process.env.PORT
+  port: process.env.PORT,
+  baseURL: process.env.BASE_URL
 }
