@@ -9,10 +9,10 @@
   },
   "scripts": {
     "test": "yarn test",
-    "client": "cd client && yarn start",
+    "client": "npm run start --prefix client",
     "start": "node index.js",
     "dev": "concurrently \"nodemon index.js\"  \"yarn client\" ",
-    "heroku-postbuild": "YARN_PRODUCTION=false cd client && yarn install && yarn build "
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client "
   },
   "author": "stephen",
   "license": "MIT",
