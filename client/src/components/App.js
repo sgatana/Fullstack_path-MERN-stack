@@ -8,7 +8,8 @@ const App = ()=> {
     <Router>
       <Header />
       <div className="container">
-        <Route path="/" component={Dashboard} />
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/dashboard" component={Dashboard} />
       </div>
     </Router>
   )
