@@ -19,4 +19,5 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(authorize)
 app.use(router)
+
 module.exports = app
