@@ -4,7 +4,7 @@ const passport = require('../middleware/authenticate')
 const router = express.Router()
 const paymentController = require('../../controllers/paymentController')
 
-router.get('*', (req, res) => {
+router.get('/', (req, res) => {
   res.send({
     message: 'Welcome to Fullstack path Application'
   })
