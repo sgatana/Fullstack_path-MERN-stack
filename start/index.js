@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const session = require('cookie-session')
 const passport = require('passport')
 const mongoose = require('mongoose')
@@ -19,5 +20,4 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(authorize)
 app.use(router)
-
 module.exports = app
