@@ -1,4 +1,4 @@
-const protectedRoutes = ['/api/payment', '/api/user']
+const protectedRoutes = ['/api/payment']
 
 module.exports = (req, res, next) => {
   if (protectedRoutes.includes(req.path)) {
